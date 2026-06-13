@@ -24,12 +24,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 20px; /*  左右の隙間を 40px から 20px に狭めて、スマホの端に寄せます！ */
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;        /*  念のため、ヘッダーの横幅を画面いっぱいに広げるおまじないです */
+  box-sizing: border-box; /*  横幅を広げたときに画面からはみ出さないようにするおまじないです */
 }
 
 .header-logo {

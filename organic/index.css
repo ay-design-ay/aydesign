@@ -23,86 +23,99 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px; /*  左右の隙間を 40px から 20px に狭めて、スマホの端に寄せます！ */
-  background-color: #ffffff;
+
+  padding: 20px 24px;
+
+  background-color: #fff;
   border-bottom: 1px solid #eaeaea;
+
   position: sticky;
   top: 0;
   z-index: 100;
-  width: 100%;        /*  念のため、ヘッダーの横幅を画面いっぱいに広げるおまじないです */
-  box-sizing: border-box; /*  横幅を広げたときに画面からはみ出さないようにするおまじないです */
+
+  width: 100%;
 }
 
 .header-logo {
+  font-size: 1.6rem;
   font-weight: bold;
-  font-size: 1.2rem;
   letter-spacing: 0.15em;
 }
 
 .header-nav a {
-  margin-left: 25px;
-  font-size: 0.9rem;
-  color: #666666;
+  margin-left: 32px;
+  font-size: 0.95rem;
+  color: #666;
   transition: color 0.3s;
 }
 
 .header-nav a:hover {
-  color: #000000;
+  color: #000;
 }
 
 /* ボタン共通 */
 .btn {
   display: inline-block;
+
   background-color: #8A9A86;
-  color: #ffffff;
-  padding: 12px 35px;
-  font-size: 0.9rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  color: #fff;
+
+  padding: 16px 42px;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  border-radius: 999px;
+
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: #6A7766;
+  transform: translateY(-2px);
 }
 
 /* メインビジュアル */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
 
-  background-image: url("img/hero_main.png");
+  background-image: url("../img/hero_main.png");
   background-size: cover;
-  background-position: center;
+  background-position: 30% center;
   background-repeat: no-repeat;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 
-  padding: 0 20px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  transform: translateY(-40px);
 }
 
 .hero-sub {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #888888;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: #888;
+  margin-bottom: 20px;
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 25px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.3;
+  margin-bottom: 24px;
+  color: #4A3F35;
 }
 
-.hero-desc {
-  font-size: 1rem;
-  color: #555555;
-  max-width: 600px;
-  margin: 0 auto 35px;
+.hero-text {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
 }
 
 /* セクションタイトル */
@@ -265,29 +278,59 @@ a {
   border-top: 1px solid #eaeaea;
 }
 
-/* スマホ用のレスポンシブ対応 */
+/* スマホ用 */
 @media (max-width: 768px) {
+
   .header {
-    padding: 20px;
+    padding: 16px 20px;
   }
+
+  .header-logo {
+    font-size: 1.2rem;
+  }
+
+  .header-nav a {
+    margin-left: 14px;
+    font-size: 0.85rem;
+  }
+
   .hero {
-    padding: 80px 20px;
+    min-height: calc(100vh - 70px);
+    background-position: 25% center;
   }
+
+  .hero-content {
+    transform: translateY(-20px);
+  }
+
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
   }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
   .service-grid {
     flex-direction: column;
     gap: 40px;
   }
+
   .about-container {
     flex-direction: column;
     gap: 30px;
     text-align: center;
   }
+
   .about-image-wrapper {
     justify-content: center;
   }
+
   .services,
   .about,
   .contact {

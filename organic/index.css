@@ -340,11 +340,11 @@ a {
     font-size: 1rem;
   }
 
-  .btn {
+  .hero-btn {
     width: 100%;
     max-width: 320px;
   }
-
+  
   .service-grid {
     flex-direction: column;
     gap: 40px;

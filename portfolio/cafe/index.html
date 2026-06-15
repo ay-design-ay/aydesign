@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- これがスマホでキュッと引き締めるおまじない -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AY Design | Web Design</title>
+  <!-- これが隣のCSSファイルを読み込むおまじない -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="header"> 
+ <div class="header-logo">obanzai.cafe</div>
+  <nav class="header-nav"> 
+    <a href="#services"></a> 
+    <a href="#about">About</a> 
+    <a href="#contact">Contact</a> 
+  </nav>
+</header> 
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-sub">Web Design for you</p>
+      <h1 class="hero-title">「らしさ」を作る</h1>
+      <p class="hero-desc">あなたに寄り添いあなたらしさを表現します</p>
+      <a href="#contact" class="btn">お問い合わせ</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2 class="section-title">SERVICES</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://i.ibb.co/fGZpYgzk/LP-20260612-202503-0000.png" alt="LP制作" class="service-image" style="width: 100%; height: auto;">
+        <!-- <h3>LP制作 / ホームページ制作</h3> -->
+        <p>集客や視認性など機能的な部分を含め、ご要望に寄り添ってご提案いたします。スマホ表示（レスポンシブ）にも完全対応。
+        <br>※現在、実績作りのため【先着3名様限定】特別モニター価格で承っております。お気軽にご相談ください！
+</p>
+      </div>
+
+<!--
+   <div class="service-card">
+        <div class="dummy-image">IMAGE placeholder</div>
+        <h3>WordPress構築</h3>
+         <p>納品後もご自身で簡単にブログや新着情報を更新できるよう、WordPressを用いたサイトを構築します。</p>
+      </div>
+-->
+      <div class="service-card">
+        <img src="https://i.ibb.co/vCCS6QZN/LP-20260612-205649-0000.png" alt="業務自動化" class="service-image" style="width: 100%; height: auto;">
+ <!--       <h3>業務自動化（GAS）</h3> -->
+        <p>Google Apps Scriptを活用し、問い合わせフォームとスプレッドシートの連携や、日々の面倒な事務作業を自動化する仕組みを作ります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-image-wrapper">        
+          <img src="https://i.ibb.co/MkxqVZ40/LP-20260613-185858-0000.png" alt="プロフィール" class="profile-image">
+      </div>
+      <div class="about-content">
+        <h2 class="section-title-left">ABOUT ME</h2>
+        <p class="profile-name"></p>
+        <p class="profile-text">
+          丁寧なヒアリングを大切に、お客様に寄り添うWeb制作を行っています。「運用しやすさ」や「業務の効率化」までを見据えたトータルなご提案が可能です。お気軽にご相談ください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="contact-desc">お仕事のご依頼やご相談は、下記よりお気軽にお問い合わせください。</p>
+    
+    <!--  デザイン復活版・Googleフォーム直結フォーム -->
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSf0cGrlzi9D6sG2syGCEzSqXRa4puJksgxnNAEd2UeaSA2xYw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="contact-form">
+  
+  <!-- お名前 -->
+  <div class="form-group">
+    <label for="name">お名前 <span class="required">*</span></label>
+    <input type="text" id="name" name="entry.1605732646" required placeholder="山田 太郎" class="form-control">
+  </div>
+
+  <!-- メールアドレス -->
+  <div class="form-group">
+    <label for="email">メールアドレス <span class="required">*</span></label>
+    <input type="email" id="email" name="entry.1292768029" required placeholder="example@email.com" class="form-control">
+  </div>
+
+  <!-- お問い合わせ内容 -->
+  <div class="form-group">
+    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+    <textarea id="message" name="entry.1780178610" rows="5" required placeholder="ご相談内容をご記入ください" class="form-control"></textarea>
+  </div>
+
+  <!-- 送信ボタン -->
+  <button type="submit" class="contact-submit-btn">送信する</button>
+</form>
+
+<!-- 💡 送信防護壁（ここはさっきのままでOK！） -->
+<script type="text/javascript">var submitted = false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('お問い合わせを受け付けました。ありがとうございます！'); location.href = '#contact';}"></iframe>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 AY Design. All rights reserved.</p>
+</footer>
+
+  </body>
+</html>

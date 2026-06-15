@@ -6,11 +6,17 @@
 }
 
 body {
-  font-family: "Times New Roman", "YuMincho", "游明朝", "MS Mincho", serif;
   background-color: #FBF9F6;
   color: #4A3F35;
   line-height: 1.7;
   letter-spacing: 0.05em;
+  font-family: "Noto Serif JP", serif;
+}
+
+.hero-title,
+.section-title,
+.header-logo {
+  font-family: "Cormorant Garamond", serif;
 }
 
 a {

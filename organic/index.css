@@ -87,6 +87,7 @@ a {
 .btn:hover {
   background-color: #6A7766;
   transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .contact-btn {
@@ -291,7 +292,7 @@ a {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 16px;
   border: 1px solid #ccc;
   font-size: 0.95rem;
   font-family: inherit;
@@ -300,6 +301,11 @@ a {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: 1px solid #1a1a1a;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
 }
 
 /* フッター */

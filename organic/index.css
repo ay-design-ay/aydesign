@@ -81,6 +81,11 @@ a {
   transform: translateY(-2px);
 }
 
+.contact-btn {
+  width: auto;
+  max-width: none;
+}
+
 /* メインビジュアル */
 .hero {
   min-height: calc(100vh - 80px);

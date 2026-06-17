@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- これがスマホでキュッと引き締めるおまじない -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ひなたベーカリー</title>
+  <!-- これが隣のCSSファイルを読み込むおまじない -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="header"> 
+ <div class="header-logo">ひなたベーカリー</div>
+  <nav class="header-nav"> 
+    <a href="#services">パンのおはなし</a> 
+    <a href="#about">アクセス</a> 
+    <a href="#contact">お問い合わせ</a> 
+  </nav>
+</header> 
+
+<main>
+  <section class="hero">
+  <div class="hero-content">
+    <p class="hero-sub">オトナもコドモも一緒に</p>
+    <h1 class="hero-title">みんなの『いつも』のパンになれたらいいな</h1>
+    <p class="hero-text">日替わりや月替わりの新しいパンもお楽しみに！</p>
+    <br>
+    <!--<a href="#contact" class="btn hero-btn">今すぐお得に試してみる</a>-->
+  </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2 class="section-title">FEATURES</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="img/futures01.png" alt="植物由来" class="service-image" style="width: 100%; height: auto;">
+        <h3>100% 植物由来の成分</h3>
+        <p>厳選されたオーガニック栽培の植物エキスだけを贅沢に配合
+        <br>
+</p>
+      </div>
+
+   <div class="service-card">
+        <img src="img/futures02.png" alt="高保湿" class="service-image" style="width: 100%; height: auto;">
+        <h3>24時間続く高保湿</h3>
+         <p>独自の高保水処方により、朝のひと塗りで夕方までみずみずしさが続きます</p>
+      </div>
+        
+      <div class="service-card">
+        <img src="img/futures03.png" alt="お肌に優しい" class="service-image" style="width: 100%; height: auto;">
+        <h3>お肌に優しい成分</h3>
+        <p>合成着色料、アルコール、香料が無添加で敏感肌の方にも安心</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-image-wrapper">        
+          <img src="img/AY Organic_20260615_212320_0000.png" alt="プロフィール" class="profile-image">
+      </div>
+      <div class="about-content">
+        <h2 class="section-title-left">ABOUT ME</h2>
+        <p class="profile-name">自然のめぐみを、毎日の素肌に</p>
+        <p class="profile-text">
+          植物由来の生命力で肌を整える。<br>毎日使うものだから、自分にも地球にも優しく。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="contact-desc"></p>
+    
+    <!--  デザイン復活版・Googleフォーム直結フォーム -->
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSf0cGrlzi9D6sG2syGCEzSqXRa4puJksgxnNAEd2UeaSA2xYw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="contact-form">
+  
+  <!-- お名前 -->
+  <div class="form-group">
+    <label for="name">お名前 <span class="required">*</span></label>
+    <input type="text" id="name" name="entry.1605732646" required placeholder="山田 太郎" class="form-control">
+  </div>
+
+  <!-- メールアドレス -->
+  <div class="form-group">
+    <label for="email">メールアドレス <span class="required">*</span></label>
+    <input type="email" id="email" name="entry.1292768029" required placeholder="example@email.com" class="form-control">
+  </div>
+
+  <!-- お問い合わせ内容 -->
+  <div class="form-group">
+    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+    <textarea id="message" name="entry.1780178610" rows="5" required placeholder="お問い合わせ内容をご記入ください" class="form-control"></textarea>
+  </div>
+
+  <!-- 送信ボタン -->
+  <button type="submit" class="btn contact-btn">
+  送信する
+  </button>
+</form>
+
+<!-- 💡 送信防護壁（ここはさっきのままでOK！） -->
+<script type="text/javascript">var submitted = false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('お問い合わせを受け付けました。ありがとうございます！'); location.href = '#contact';}"></iframe>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 AY Design. All rights reserved.</p>
+</footer>
+
+  </body>
+</html>

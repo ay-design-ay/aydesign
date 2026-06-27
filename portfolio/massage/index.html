@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- これがスマホでキュッと引き締めるおまじない -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>obanzai.cafe</title>
+  <!-- これが隣のCSSファイルを読み込むおまじない -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="header"> 
+ <div class="header-logo">obanzai.cafe</div>
+  <nav class="header-nav"> 
+    <a href="#service">おしながき</a> 
+    <a href="#about">アクセス</a> 
+    <a href="#contact">ご予約</a> 
+  </nav>
+</header> 
+
+<main>
+  <section class="hero">
+
+  <!-- ① 人と吹き出し（最初から表示） -->
+  <div class="hero-image">
+    <img src="img/hero.png" alt="アツカル整体院">
+  </div>
+
+  <!-- ② 「あ、」 -->
+  <p class="hero-a">あ、</p>
+
+  <!-- ③ キャッチコピー -->
+  <p class="hero-copy">
+  最近「あ」が増えたあなたに。<br>
+その「あ」、今日のうちに。
+  </p>
+
+  <!-- ④ ロゴ -->
+  <img src="img/logo.png" alt="アツカル整体院" class="hero-logo">
+
+  </section>
+
+  <section id="services" class="services">
+    <h2 class="section-title">おしながき</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="img/menu01.png" alt="ごはんもの" class="service-image" style="width: 100%; height: auto;">
+        <h3>ごはんもの</h3>
+        <p>日替わり定食や、大豆ミートからあげ定食、豆腐ハンバーグ定食など。
+        <br>おばんざいは日替わりで5種類の中から3つ選べます。
+</p>
+      </div>
+      
+   <div class="service-card">
+       <img src="img/menu02.png" alt="スイーツ" class="service-image" style="width: 100%; height: auto;">
+        <h3>スイーツ</h3>
+         <p>豆腐チーズケーキや豆乳プリンなどヘルシーだけど甘くてほっとするスイーツあります。</p>
+      </div>
+      
+      <div class="service-card">
+        <img src="img/menu03.png" alt="のみもの" class="service-image" style="width: 100%; height: auto;">
+        <h3>のみもの</h3></h3>
+        <p>たんぽぽコーヒーや体質に合わせた薬膳茶など、カラダに"ちょっといい"のみものあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-image-wrapper">        
+          <img src="img/aboutus.png" alt="obanzai.cafe" class="profile-image">
+      </div>
+      <div class="about-content">
+        <h2 class="section-title-left">アクセス</h2>
+        <p class="profile-name">obanzai.cafe</p>
+        <p class="profile-text">
+          〒163-8001 東京都新宿区西新宿2丁目8-1<br>
+          03-5321-1111<br> <br>
+          open 11:00 〜 20:00（日曜定休日）<br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">ご予約</h2>
+    <p class="contact-desc">
+      小さいお店のため、5人以上のご来店の方は、以下よりご予約頂けますと幸いです。 <br>
+      ご予約は前日20時までにご連絡ください。
+    </p>
+    
+    <!--  デザイン復活版・Googleフォーム直結フォーム -->
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSf0cGrlzi9D6sG2syGCEzSqXRa4puJksgxnNAEd2UeaSA2xYw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="contact-form">
+  
+  <!-- お名前 -->
+  <div class="form-group">
+    <label for="name">お名前 <span class="required">*</span></label>
+    <input type="text" id="name" name="entry.1605732646" required placeholder="山田 太郎" class="form-control">
+  </div>
+
+  <!-- メールアドレス -->
+  <div class="form-group">
+    <label for="email">メールアドレス <span class="required">*</span></label>
+    <input type="email" id="email" name="entry.1292768029" required placeholder="example@email.com" class="form-control">
+  </div>
+
+  <!-- お問い合わせ内容 -->
+  <div class="form-group">
+    <label for="message">ご予約内容 <span class="required">*</span></label>
+    <textarea id="message" name="entry.1780178610" rows="5" required placeholder="日時と人数をご記入ください" class="form-control"></textarea>
+  </div>
+
+  <!-- 送信ボタン -->
+  <button type="submit" class="contact-submit-btn">送信する</button>
+</form>
+
+<!-- 💡 送信防護壁（ここはさっきのままでOK！） -->
+<script type="text/javascript">var submitted = false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('お問い合わせを受け付けました。ありがとうございます！'); location.href = '#contact';}"></iframe>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 obanzai.cafe. All rights reserved.</p>
+</footer>
+
+  </body>
+</html>
